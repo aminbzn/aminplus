@@ -1,1 +1,8 @@
+
+vless://4f168cd3-5332-434b-9f25-c5f668cc3153@rezajoon.rezashirali75.workers.dev:443?encryption=none&security=tls&sni=rezajoon.rezashirali75.workers.dev&fp=randomized&type=ws&host=rezajoon.rezashirali75.workers.dev&path=%2F%3Fed%3D2048#rezajoon.rezashirali75.workers.dev
+
 vless://4d3afa01-26ed-4a6d-99d2-b8a77d3882bd@taaleb.ttalebzadeh48.workers.dev:443?path=%2F%3Fed%3D2048&security=tls&encryption=none&host=taaleb.ttalebzadeh48.workers.dev&fp=chrome&type=ws&sni=taaleb.ttalebzadeh48.workers.dev#taaleb.ttalebzadeh48.workers.dev
+
+vless://7d5e4ea3-5058-4339-b2b4-5d603c89a58f@tv.amin-baavi.workers.dev:443?encryption=none&security=tls&sni=tv.amin-baavi.workers.dev&fp=randomized&type=ws&host=tv.amin-baavi.workers.dev&path=%2F%3Fed%3D2048#tv.amin-baavi.workers.dev
+
+vless://541ecc07-611f-40d4-b534-393f3e40eb69@sahar2.amin-baavi.workers.dev:443?encryption=none&security=tls&sni=sahar2.amin-baavi.workers.dev&fp=randomized&type=ws&host=sahar2.amin-baavi.workers.dev&path=%2F%3Fed%3D2048#sahar2.amin-baavi.workers.dev
