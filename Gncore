@@ -1,1 +1,4 @@
-vless://05165280-fa1d-49d8-bae6-c24b6e08c5f7@damp-pine-e67b00.sigdjgs95.workers.dev:443?encryption=none&security=tls&sni=damp-pine-e67b00.sigdjgs95.workers.dev&fp=randomized&type=ws&host=damp-pine-e67b00.sigdjgs95.workers.dev&path=%2F%3Fed%3D2048#damp-pine-e67b00.sigdjgs95.workers.dev
+vless://deeb817d-cf08-477a-8a4b-bd14f7a4cbcb@panel7.nanaweb.ir:3031?encryption=none&security=none&type=tcp&headerType=http&host=play.google.com#Germany%20-%20direct%20%F0%9F%87%A9%F0%9F%87%AA
+vless://deeb817d-cf08-477a-8a4b-bd14f7a4cbcb@panel7.nanaweb.ir:3034?encryption=none&security=none&type=tcp&headerType=http&host=play.google.com#France%20-%20direct%20%F0%9F%87%AB%F0%9F%87%B7
+vless://deeb817d-cf08-477a-8a4b-bd14f7a4cbcb@panel7.nanaweb.ir:3045?encryption=none&security=none&type=tcp&headerType=http&host=play.google.com#Netherlands%20-%20direct%20%F0%9F%87%B3%F0%9F%87%B1
+vless://deeb817d-cf08-477a-8a4b-bd14f7a4cbcb@panel7.nanaweb.ir:3047?encryption=none&security=none&type=tcp&headerType=http&host=play.google.com#Switzerland%20-%20direct%20%F0%9F%87%A8%F0%9F%87%AD
