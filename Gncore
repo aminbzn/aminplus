@@ -1,346 +1,474 @@
 {
+  "__Credits__": {
+    "creator": "@patterniha",
+    "donate1": "USDT (BEP20): 0x76a768B53Ca77B43086946315f0BDF21156bF424",
+    "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
+    "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
+  },
+  "remarks": "Serverless-v48-low_delay",
+  "version": {
+    "min": "26.6.27"
+  },
+  "log": {
+    "loglevel": "warning",
+    "dnsLog": false,
+    "access": "none"
+  },
+  "policy": {
+    "levels": {
+      "0": {
+        "uplinkOnly": 0,
+        "downlinkOnly": 0
+      },
+      "1": {
+        "uplinkOnly": 0,
+        "downlinkOnly": 0,
+        "connIdle": 12
+      }
+    }
+  },
   "dns": {
     "hosts": {
-      "domain:googleapis.cn": "googleapis.com",
-      "dns.alidns.com": [
-        "223.5.5.5",
-        "223.6.6.6",
-        "2400:3200::1",
-        "2400:3200:baba::1"
-      ],
-      "dns.sse.cisco.com": [
-        "208.67.220.220",
-        "208.67.222.222",
-        "2620:119:35::35",
-        "2620:119:53::53"
-      ],
-      "dns.umbrella.com": [
-        "208.67.220.220",
-        "208.67.222.222",
-        "2620:119:35::35",
-        "2620:119:53::53"
-      ],
-      "one.one.one.one": [
-        "1.1.1.1",
-        "1.0.0.1",
-        "2606:4700:4700::1111",
-        "2606:4700:4700::1001"
-      ],
-      "1dot1dot1dot1.cloudflare-dns.com": [
-        "1.1.1.1",
-        "1.0.0.1",
-        "2606:4700:4700::1111",
-        "2606:4700:4700::1001"
-      ],
-      "dns.cloudflare.com": [
-        "162.159.61.8",
-        "172.64.41.8",
-        "2a06:98c1:52::8",
-        "2803:f800:53::8"
-      ],
-      "cloudflare-dns.com": [
-        "104.16.248.249",
-        "104.16.249.249",
-        "2606:4700::6810:f8f9",
-        "2606:4700::6810:f9f9"
-      ],
-      "engage.cloudflareclient.com": [
-        "162.159.192.1",
-        "2606:4700:d0::a29f:c001"
-      ],
-      "doh.pub": [
-        "1.12.12.12",
-        "120.53.53.53"
-      ],
-      "dot.pub": [
-        "1.12.12.12",
-        "120.53.53.53"
-      ],
-      "dns.google": [
-        "8.8.8.8",
-        "8.8.4.4",
-        "2001:4860:4860::8888",
-        "2001:4860:4860::8844"
-      ],
-      "dns.quad9.net": [
-        "9.9.9.9",
-        "149.112.112.112",
-        "2620:fe::fe",
-        "2620:fe::9"
-      ],
-      "dns.sb": [
-        "45.11.45.11",
-        "185.222.222.222",
-        "2a09::",
-        "2a11::"
-      ],
-      "common.dot.dns.yandex.net": [
-        "77.88.8.8",
-        "77.88.8.1",
-        "2a02:6b8::feed:0ff",
-        "2a02:6b8:0:1::feed:0ff"
-      ],
-      "rah.ultranv.ir": "37.202.228.103"
+      "cloudflare-dns.com": "challenges.cloudflare.com"
     },
     "servers": [
-      "https://cloudflare-dns.com/dns-query",
       {
-        "address": "223.5.5.5",
+        "address": "fakedns",
         "domains": [
-          "geosite:cn"
-        ],
-        "expectIPs": [
-          "geoip:cn"
-        ],
-        "skipFallback": true,
-        "tag": "domestic-dns_cn_expect_0"
-      },
-      {
-        "address": "https://cloudflare-dns.com/dns-query",
-        "domains": [
-          "geosite:google"
+          "domain:ir",
+          "geosite:private",
+          "geosite:category-ir",
+          "geosite:xai",
+          "geosite:openai",
+          "geosite:google-deepmind",
+          "geosite:anthropic",
+          "geosite:github",
+          "geosite:microsoft",
+          "geosite:golang",
+          "geosite:python",
+          "geosite:rust",
+          "full:challenges.cloudflare.com"
         ]
       },
       {
-        "address": "223.5.5.5",
-        "domains": [
-          "geosite:private"
-        ],
-        "skipFallback": true,
-        "tag": "domestic-dns_1_0"
+        "tag": "no-filter-dns",
+        "address": "https://cloudflare-dns.com/dns-query",
+        "timeoutMs": 12000,
+        "finalQuery": true
       },
       {
-        "address": "223.5.5.5",
+        "address": "localhost",
         "domains": [
-          "domain:alidns.com",
-          "domain:doh.pub",
-          "domain:dot.pub",
-          "domain:360.cn",
-          "domain:onedns.net"
+          "domain:ir",
+          "geosite:private",
+          "geosite:category-ir",
+          "geosite:xai",
+          "geosite:openai",
+          "geosite:google-deepmind",
+          "geosite:anthropic",
+          "geosite:github",
+          "geosite:microsoft",
+          "geosite:golang",
+          "geosite:python",
+          "geosite:rust",
+          "full:challenges.cloudflare.com"
         ],
-        "skipFallback": true,
-        "tag": "domestic-dns_2_0"
-      },
-      {
-        "address": "223.5.5.5",
-        "domains": [
-          "geosite:cn"
-        ],
-        "skipFallback": true,
-        "tag": "domestic-dns_3_0"
+        "finalQuery": true
       }
     ],
-    "tag": "dns-module"
+    "queryStrategy": "UseSystem",
+    "useSystemHosts": true,
+    "serveStale": true
   },
   "inbounds": [
     {
-      "listen": "127.0.0.1",
+      "tag": "mixed-in",
       "port": 10808,
-      "protocol": "socks",
+      "protocol": "mixed",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "fakedns",
+          "tls",
+          "http",
+          "quic"
+        ],
+        "routeOnly": false
+      },
       "settings": {
-        "auth": "noauth",
         "udp": true,
-        "userLevel": 8
+        "ip": "127.0.0.1"
       },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled": true,
-        "routeOnly": false
-      },
-      "tag": "socks"
-    },
-    {
-      "listen": "127.0.0.1",
-      "port": 10809,
-      "protocol": "http",
-      "settings": {
-        "userLevel": 8
-      },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled": true,
-        "routeOnly": false
-      },
-      "tag": "http"
+      "streamSettings": {
+        "sockopt": {
+          "tcpKeepAliveInterval": 1,
+          "tcpKeepAliveIdle": 11
+        }
+      }
     }
   ],
-  "log": {
-    "loglevel": "warning"
-  },
   "outbounds": [
     {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "address": "rah.ultranv.ir",
-        "encryption": "none",
-        "id": "5f50fda2-9424-451a-b8d1-d86bdfdb485d",
-        "level": 8,
-        "port": 8080
-      },
+      "tag": "block",
+      "protocol": "block"
+    },
+    {
+      "tag": "tcp-direct",
+      "protocol": "direct",
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
         "sockopt": {
-          "domainStrategy": "UseIP",
+          "domainStrategy": "ForceIP",
           "happyEyeballs": {
+            "tryDelayMs": 300,
+            "prioritizeIPv6": true,
             "interleave": 2,
-            "maxConcurrentTry": 4,
-            "prioritizeIPv6": false,
-            "tryDelayMs": 250
+            "maxConcurrentTry": 20
           }
-        },
-        "tlsSettings": {
-          "allowInsecure": false,
-          "serverName": "vip.dokhtaroune.ir"
-        },
-        "wsSettings": {
-          "host": "vip.dokhtaroune.ir",
-          "path": "live"
         }
-      },
-      "tag": "proxy"
+      }
     },
     {
-      "protocol": "freedom",
+      "tag": "udp-direct",
+      "protocol": "direct",
+      "settings": {
+        "targetStrategy": "ForceIPv6v4"
+      }
+    },
+    {
+      "tag": "dns-out",
+      "protocol": "dns",
+      "settings": {
+        "userLevel": 1
+      }
+    },
+    {
+      "tag": "tcp-fragment",
+      "protocol": "direct",
       "streamSettings": {
-        "network": "tcp",
+        "finalmask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "419"
+              }
+            }
+          ]
+        },
         "sockopt": {
-          "domainStrategy": "UseIP"
+          "domainStrategy": "ForceIP",
+          "happyEyeballs": {
+            "tryDelayMs": 300,
+            "prioritizeIPv6": true,
+            "interleave": 2,
+            "maxConcurrentTry": 20
+          }
         }
-      },
-      "tag": "direct"
+      }
     },
     {
-      "protocol": "blackhole",
-      "settings": {},
-      "tag": "block"
+      "tag": "tcp-fragment-tls",
+      "protocol": "direct",
+      "streamSettings": {
+        "finalmask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "5",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "43",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "522"
+              }
+            }
+          ]
+        },
+        "sockopt": {
+          "domainStrategy": "ForceIP",
+          "happyEyeballs": {
+            "tryDelayMs": 300,
+            "prioritizeIPv6": true,
+            "interleave": 2,
+            "maxConcurrentTry": 20
+          }
+        }
+      }
+    },
+    {
+      "tag": "udp-noises",
+      "protocol": "direct",
+      "settings": {
+        "targetStrategy": "ForceIPv6v4"
+      },
+      "streamSettings": {
+        "finalmask": {
+          "udp": [
+            {
+              "type": "noise",
+              "settings": {
+                "reset": "28",
+                "noise": [
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  },
+                  {
+                    "rand": "1200-1230",
+                    "delay": "10"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
     }
   ],
-  "remarks": "🇩🇪 DE",
   "routing": {
-    "domainStrategy": "AsIs",
+    "domainStrategy": "IPOnDemand",
     "rules": [
       {
+        "outboundTag": "tcp-fragment-tls",
+        "inboundTag": [
+          "no-filter-dns"
+        ]
+      },
+      {
+        "outboundTag": "dns-out",
+        "port": 53
+      },
+      {
+        "outboundTag": "tcp-direct",
+        "network": "tcp",
+        "domain": [
+          "domain:ir",
+          "geosite:private",
+          "geosite:category-ir",
+          "geosite:xai",
+          "geosite:openai",
+          "geosite:google-deepmind",
+          "geosite:anthropic",
+          "geosite:github",
+          "geosite:microsoft",
+          "geosite:golang",
+          "geosite:python",
+          "geosite:rust"
+        ]
+      },
+      {
+        "outboundTag": "udp-direct",
         "network": "udp",
+        "domain": [
+          "domain:ir",
+          "geosite:private",
+          "geosite:category-ir",
+          "geosite:xai",
+          "geosite:openai",
+          "geosite:google-deepmind",
+          "geosite:anthropic",
+          "geosite:github",
+          "geosite:microsoft",
+          "geosite:golang",
+          "geosite:python",
+          "geosite:rust"
+        ]
+      },
+      {
         "outboundTag": "block",
+        "ip": [
+          "10.10.34.0/24",
+          "2001:4188:2:600::/64"
+        ]
+      },
+      {
+        "outboundTag": "tcp-direct",
+        "network": "tcp",
+        "ip": [
+          "geoip:private",
+          "geoip:ir"
+        ]
+      },
+      {
+        "outboundTag": "udp-direct",
+        "network": "udp",
+        "ip": [
+          "geoip:private",
+          "geoip:ir"
+        ]
+      },
+      {
+        "outboundTag": "block",
+        "network": "udp",
+        "protocol": [
+          "quic"
+        ],
+        "ip": [
+          "0.0.0.0/0",
+          "::/0"
+        ]
+      },
+      {
+        "outboundTag": "block",
+        "network": "udp",
         "port": "443",
-        "type": "field"
-      },
-      {
-        "domain": [
-          "geosite:google"
-        ],
-        "outboundTag": "proxy",
-        "type": "field"
-      },
-      {
         "ip": [
-          "ext:geoip-only-cn-private.dat:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
+          "0.0.0.0/0",
+          "::/0"
+        ]
       },
       {
-        "domain": [
-          "geosite:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
+        "outboundTag": "udp-direct",
+        "network": "udp",
         "ip": [
-          "223.5.5.5",
-          "223.6.6.6",
-          "2400:3200::1",
-          "2400:3200:baba::1",
-          "119.29.29.29",
-          "1.12.12.12",
-          "120.53.53.53",
-          "2402:4e00::",
-          "2402:4e00:1::",
-          "180.76.76.76",
-          "2400:da00::6666",
-          "114.114.114.114",
-          "114.114.115.115",
-          "114.114.114.119",
-          "114.114.115.119",
-          "114.114.114.110",
-          "114.114.115.110",
-          "180.184.1.1",
-          "180.184.2.2",
-          "101.226.4.6",
-          "218.30.118.6",
-          "123.125.81.6",
-          "140.207.198.6",
-          "1.2.4.8",
-          "210.2.4.8",
-          "52.80.66.66",
-          "117.50.22.22",
-          "2400:7fc0:849e:200::4",
-          "2404:c2c0:85d8:901::4",
-          "117.50.10.10",
-          "52.80.52.52",
-          "2400:7fc0:849e:200::8",
-          "2404:c2c0:85d8:901::8",
-          "117.50.60.30",
-          "52.80.60.30"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
+          "0.0.0.0/0",
+          "::/0"
+        ]
       },
       {
-        "domain": [
-          "domain:alidns.com",
-          "domain:doh.pub",
-          "domain:dot.pub",
-          "domain:360.cn",
-          "domain:onedns.net"
+        "outboundTag": "tcp-fragment-tls",
+        "network": "tcp",
+        "protocol": [
+          "tls"
         ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
         "ip": [
-          "ext:geoip-only-cn-private.dat:cn"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
+          "0.0.0.0/0",
+          "::/0"
+        ]
       },
       {
-        "domain": [
-          "geosite:cn"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
+        "outboundTag": "tcp-fragment-tls",
+        "network": "tcp",
+        "port": "443",
+        "ip": [
+          "0.0.0.0/0",
+          "::/0"
+        ]
       },
       {
-        "inboundTag": [
-          "domestic-dns_1_0",
-          "domestic-dns_2_0",
-          "domestic-dns_3_0",
-          "domestic-dns_cn_expect_0"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
+        "outboundTag": "tcp-fragment",
+        "network": "tcp",
+        "ip": [
+          "0.0.0.0/0",
+          "::/0"
+        ]
       },
       {
-        "inboundTag": [
-          "dns-module"
-        ],
-        "outboundTag": "proxy",
-        "type": "field"
+        "outboundTag": "block",
+        "port": "0-65535"
       }
     ]
   }
